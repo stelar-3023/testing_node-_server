@@ -12,9 +12,9 @@ export default function (database) {
       return;
     }
     // to pass test that create user function is called at leat once
-    database.createUser(username, password)
+    const userId = await database.createUser(username, password)
 
-    res.send({ userId: 0 });
+    res.send({ userId });
   });
 
   return app;
