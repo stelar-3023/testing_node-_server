@@ -11,6 +11,8 @@ export default function (database) {
       res.sendStatus(400);
       return;
     }
+    // to pass test that create user function is called at leat once
+    database.createUser(username, password)
 
     res.send({ userId: 0 });
   });
