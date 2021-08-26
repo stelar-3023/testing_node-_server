@@ -41,7 +41,7 @@ describe("POST /users", () => {
         const response = await request(app)
           .post("/users")
           .send({ username: "username", password: "password" });
-        expect(response.body.userId).toBe(i);
+         expect(response.body.userId).toBe(i);
       }
     });
     // should resppnd with a 200 status code
@@ -83,4 +83,5 @@ describe("POST /users", () => {
     });
   });
 });
-// NODE_OPTIONS=--experimental-vm-modules npx jest
+// NODE_OPTIONS=--experimental-vm-modules npx jest --collect-coverage
+
